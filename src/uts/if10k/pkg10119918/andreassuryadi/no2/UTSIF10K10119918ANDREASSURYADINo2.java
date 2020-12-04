@@ -5,6 +5,8 @@
  */
 package uts.if10k.pkg10119918.andreassuryadi.no2;
 
+import java.util.Scanner;
+
 /**
  *
  * @author 
@@ -22,7 +24,19 @@ public class UTSIF10K10119918ANDREASSURYADINo2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner scanner = new Scanner(System.in);
+        
+        int saldoAwal, jumlahDiambil;
+        
+        System.out.println("====Program Penarikan Uang====");
+        System.out.print("Masukkan Saldo Awal : ");
+        saldoAwal = scanner.nextInt();
+        System.out.print("Jumlah uang yang diambil : ");
+        jumlahDiambil = scanner.nextInt();
+        
+        Tabungan tabungan = new Tabungan(saldoAwal);
+        
+        System.out.println("Saldo Anda Sekarang : " + tabungan.ambilUang(jumlahDiambil));
     }
     
 }
